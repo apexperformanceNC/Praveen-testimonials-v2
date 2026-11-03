@@ -19,11 +19,11 @@ function render(item) {
       const img = document.createElement('img');
       img.loading = 'lazy';
       img.src = src;
-      img.alt = item.name + (item.kind === 'transformation' ? ' — ' + (['Before', 'After', 'Training'][i] || 'Training') : ' — training photograph');
+      img.alt = item.name + (item.kind === 'transformation' ? ' — ' + (['Before', 'After', 'Squat 90 kgs'][i] || 'Training') : ' — training photograph');
       img.onerror = () => { fig.replaceChildren(elt('div', 'missing', 'Image unavailable — check filename')); };
       fig.append(img);
       if (item.kind === 'transformation') {
-        fig.append(elt('figcaption', '', ['Before · June 2026 · 85 kg', 'After · September 2026 · 78 kg', 'Training'][i] || ''));
+        fig.append(elt('figcaption', '', ['Before · June 2026 · 85 kg', 'After · September 2026 · 78 kg', 'Squat 90 kgs'][i] || ''));
       }
       photos.append(fig);
     });
