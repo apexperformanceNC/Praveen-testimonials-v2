@@ -24,11 +24,11 @@ body { margin:0; background:var(--paper); font:16px/1.7 Inter,system-ui,sans-ser
 .photos { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; align-items:start; }
 .photos.single { grid-template-columns:1fr; max-width:340px; margin:0 auto; }
 .photos figure { margin:0; min-width:0; }
-.photos img { display:block; width:100%; height:310px; object-fit:contain; object-position:center; background:#f2f0eb; border-radius:2px; }
+.photos img { display:block; width:100%; height:310px; object-fit:contain; object-position:center; background:transparent; border-radius:2px; }
 .photos.single img { height:350px; }
 .photos figcaption { font-size:11px; color:var(--muted); padding:6px 0 0; }
-.card[data-id="saravanan"] .photos.single { max-width:300px; }
-.card[data-id="saravanan"] .photos.single img { height:360px; }
+.card[data-id="saravanan"] .photos.single { width:100%; max-width:350px; }
+.card[data-id="saravanan"] .photos.single img { height:auto; aspect-ratio:1 / 1; object-fit:cover; object-position:center 25%; }
 .card[data-id="aman-duggal"] .photos.single { max-width:280px; }
 .card[data-id="syed"] .photos.single { max-width:340px; }
 .card[data-id="vinoth"] .photos img,.card[data-id="sh"] .photos img { height:300px; }
