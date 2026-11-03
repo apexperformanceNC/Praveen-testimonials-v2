@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+:root { --ink:#191b1d; --muted:#626970; --paper:#f7f6f3; --line:#e7e5e0; --gold:#b89b69; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--paper); font:16px/1.7 Inter,system-ui,sans-serif; color:var(--ink); }
+.shell { width:min(1220px,calc(100% - 48px)); margin:auto; }
+.hero { background:#121518; color:#fff; padding:86px 0 92px; }
+.eyebrow { font-size:11px; font-weight:800; letter-spacing:.18em; color:#d5b77d; }
+.eyebrow.dark { color:#9f7e4d; }
+.hero h1 { font-size:clamp(56px,8vw,100px); letter-spacing:-.075em; line-height:1; margin:18px 0; }
+.dot { color:#d4b476; }
+.hero p { max-width:610px; color:#d6d9da; font-size:18px; }
+.hero-link { display:inline-block; margin-top:20px; color:#fff; text-decoration:none; border-bottom:1px solid var(--gold); padding-bottom:8px; }
+.hero-link span { margin-left:14px; }
+.about { padding:58px 0 8px; max-width:850px; }
+.about h2 { font-size:clamp(28px,3.2vw,42px); line-height:1.18; letter-spacing:-.04em; margin:12px 0 22px; }
+.about p { color:var(--muted); margin:0 0 16px; }
+.intro { display:flex; align-items:end; justify-content:space-between; gap:40px; padding:68px 0 35px; }
+.intro h2,.closing h2 { font-size:clamp(32px,4vw,50px); line-height:1.1; letter-spacing:-.05em; margin:12px 0; }
+.intro>p { max-width:410px; color:var(--muted); font-size:14px; }
+.card { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); background:#fff; border:1px solid var(--line); margin:0 0 27px; }
+.card.text-only { display:block; }
+.visual { padding:20px; min-width:0; align-self:start; }
+.photos { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; align-items:start; }
+.photos.single { grid-template-columns:1fr; max-width:340px; margin:0 auto; }
+.photos figure { margin:0; min-width:0; }
+.photos img { display:block; width:100%; height:310px; object-fit:cover; object-position:center 28%; background:#f2f0eb; border-radius:2px; }
+.photos.single img { height:350px; }
+.photos figcaption { font-size:11px; color:var(--muted); padding:6px 0 0; }
+.card[data-id="saravanan"] .photos.single { max-width:300px; }
+.card[data-id="saravanan"] .photos.single img { height:360px; }
+.card[data-id="aman-duggal"] .photos.single { max-width:280px; }
+.card[data-id="syed"] .photos.single { max-width:340px; }
+.card[data-id="vinoth"] .photos img,.card[data-id="sh"] .photos img { height:300px; }
+.card[data-id="prithiv"] .photos { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.card[data-id="prithiv"] .photos figure:last-child { grid-column:1/-1; }
+.card[data-id="prithiv"] .photos figure:last-child img { height:260px; object-position:center 45%; }
+.body { padding:46px 48px 42px; min-width:0; }
+.text-only .body { max-width:950px; margin:auto; }
+.mark { font-family:Georgia,serif; color:var(--gold); font-size:70px; height:44px; line-height:1; }
+.quote { margin:24px 0 27px; font-size:16px; line-height:1.83; }
+.quote p { margin:0 0 24px; }
+.quote p:last-child { margin:0; }
+.person { border-top:1px solid var(--line); padding-top:15px; display:flex; flex-direction:column; line-height:1.6; }
+.person strong { font-size:15px; }
+.person span { font-size:12px; color:var(--muted); }
+.closing { text-align:center; background:#fff; border:1px solid var(--line); padding:72px 30px; margin:45px 0 60px; }
+.closing p { color:var(--muted); }
+footer { padding:0 20px 45px; text-align:center; color:var(--muted); font-size:12px; }
+.loading { padding:40px; }
+.missing { padding:40px 12px; color:#762b20; background:#fff0ed; font-size:13px; }
+#error { padding:20px; background:#fff0ed; border:1px solid #b66; color:#762b20; }
+@media (max-width:830px) {
+  .intro { display:block; padding-top:44px; }
+  .intro>p { max-width:none; }
+  .card { grid-template-columns:1fr; }
+  .visual { padding:18px 18px 0; }
+  .body { padding:28px 27px 36px; }
+  .photos.single { max-width:290px; }
+  .photos img { height:300px; }
+  .photos.single img { height:330px; }
+  .quote { font-size:15px; }
+  .hero { padding:66px 0; }
+  .shell { width:min(100% - 28px,1220px); }
+}
+@media (max-width:420px) {
+  .photos img { height:215px; }
+  .card[data-id="sh"] .photos img,.card[data-id="vinoth"] .photos img { height:215px; }
+  .card[data-id="prithiv"] .photos figure:last-child img { height:220px; }
+  .body { padding:25px 21px; }
+}
