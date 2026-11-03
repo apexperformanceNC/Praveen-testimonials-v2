@@ -34,6 +34,7 @@ body { margin:0; background:var(--paper); font:16px/1.7 Inter,system-ui,sans-ser
 .card[data-id="vinoth"] .photos img,.card[data-id="sh"] .photos img { height:300px; }
 .card[data-id="prithiv"] .photos { grid-template-columns:repeat(2,minmax(0,1fr)); }
 .card[data-id="prithiv"] .photos figure:last-child { grid-column:1/-1; }
+.card[data-id="prithiv"] .photos figcaption { text-align:center; }
 .card[data-id="prithiv"] .photos figure:last-child img { height:260px; object-fit:contain; object-position:center; }
 .body { padding:46px 48px 42px; min-width:0; }
 .text-only .body { max-width:950px; margin:auto; }
